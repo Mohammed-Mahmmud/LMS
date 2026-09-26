@@ -128,7 +128,7 @@ The real webhook endpoint is `POST /webhooks/payment-provider`, signed with HMAC
 ## Security note: Laravel 11
 
 The brief requires Laravel 11, which reached end of life in March 2026. Every 11.x release, including the
-latest (11.56.1), is affected by two advisories that were only fixed in Laravel 12.60+/13.10+:
+latest (11.56.1), is affected by two advisories that have no patched 11.x release:
 
 * CRLF injection in the default `email` validation rule (CVE-2026-48019)
 * temporary signed URL path confusion
@@ -138,8 +138,8 @@ Composer blocks packages with known advisories, so `composer.json` ignores exact
 more vulnerable 11.x release can be installed. Every other advisory is still enforced.
 
 **Impact here:** this app doesn't send email built from user input, and it doesn't use temporary signed URLs.
-In production I would upgrade to Laravel 12. The domain code needs no changes for that, and it was originally
-built and tested on Laravel 12.
+In production I would move to a supported Laravel release. The domain code (ledger, allocation, payouts)
+uses no version-specific framework features, so that's a dependency upgrade, not a rewrite.
 
 ## Where things are
 

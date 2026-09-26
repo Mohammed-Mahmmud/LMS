@@ -80,10 +80,10 @@
         },
         "audit": {
             "ignore": {
-                "PKSA-mdq4-51ck-6kdq": "Laravel 11 is EOL; fix only exists in 12.60+/13.10+. Brief requires Laravel 11. See README > Security note.",
-                "PKSA-3r5d-mb8f-1qw9": "Laravel 11 is EOL; fix only exists in 12.60+/13.10+. Brief requires Laravel 11. See README > Security note.",
-                "PKSA-m5cs-t1y6-qpcs": "Laravel 11 is EOL; fix only exists in 12.60+/13.10+. Brief requires Laravel 11. See README > Security note.",
-                "PKSA-zwc5-qtrz-zm1n": "Laravel 11 is EOL; fix only exists in 12.60+/13.10+. Brief requires Laravel 11. See README > Security note."
+                "PKSA-mdq4-51ck-6kdq": "Laravel 11 is EOL and has no patched 11.x release. Brief requires Laravel 11. See README > Security note.",
+                "PKSA-3r5d-mb8f-1qw9": "Laravel 11 is EOL and has no patched 11.x release. Brief requires Laravel 11. See README > Security note.",
+                "PKSA-m5cs-t1y6-qpcs": "Laravel 11 is EOL and has no patched 11.x release. Brief requires Laravel 11. See README > Security note.",
+                "PKSA-zwc5-qtrz-zm1n": "Laravel 11 is EOL and has no patched 11.x release. Brief requires Laravel 11. See README > Security note."
             }
         }
     },
