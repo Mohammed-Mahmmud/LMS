@@ -4,6 +4,9 @@ namespace App\Models;
 
 use App\Enums\LedgerEntryType;
 use App\Enums\PayoutStatus;
+use App\Models\Course;
+use App\Models\LedgerEntry;
+use App\Models\Payout;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;

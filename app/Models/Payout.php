@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Enums\PayoutStatus;
+use App\Models\Instructor;
+use App\Models\LedgerEntry;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;

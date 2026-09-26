@@ -3,6 +3,10 @@
 namespace App\Models;
 
 use App\Enums\LedgerEntryType;
+use App\Models\Instructor;
+use App\Models\Payout;
+use App\Models\Refund;
+use App\Models\Subscription;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use LogicException;

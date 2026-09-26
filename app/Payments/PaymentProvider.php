@@ -5,6 +5,8 @@ namespace App\Payments;
 use App\Payments\Exceptions\ProviderRejectedException;
 use App\Payments\Exceptions\ProviderTimeoutException;
 use App\Payments\Exceptions\ProviderUnavailableException;
+use App\Payments\TransferRequest;
+use App\Payments\TransferResult;
 
 interface PaymentProvider
 {

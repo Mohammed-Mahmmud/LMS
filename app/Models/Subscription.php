@@ -3,6 +3,11 @@
 namespace App\Models;
 
 use App\Enums\SubscriptionStatus;
+use App\Models\LedgerEntry;
+use App\Models\Plan;
+use App\Models\Refund;
+use App\Models\RevenueAllocation;
+use App\Models\Student;
 use Carbon\CarbonImmutable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

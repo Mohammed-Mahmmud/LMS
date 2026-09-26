@@ -4,6 +4,7 @@ namespace App\Ledger;
 
 use App\Enums\LedgerEntryType;
 use App\Enums\SubscriptionStatus;
+use App\Ledger\Ledger;
 use App\Models\RevenueAllocation;
 use App\Models\Subscription;
 use App\Models\WatchSession;

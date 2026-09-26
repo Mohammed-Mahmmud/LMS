@@ -128,7 +128,7 @@ The real webhook endpoint is `POST /webhooks/payment-provider`, signed with HMAC
 ## Security note: Laravel 11
 
 The brief requires Laravel 11, which reached end of life in March 2026. Every 11.x release, including the
-latest (11.56.1), is affected by two advisories that have no patched 11.x release:
+latest (11.56.1), is affected by two advisories that have no patched 11.x release: 
 
 * CRLF injection in the default `email` validation rule (CVE-2026-48019)
 * temporary signed URL path confusion
