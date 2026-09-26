@@ -1,0 +1,52 @@
+x-app: &app
+  build: .
+  image: instructor-revenue-ledger
+  environment: &app-env
+    APP_URL: http://localhost:8000
+    DB_CONNECTION: mysql
+    DB_HOST: mysql
+    DB_PORT: 3306
+    DB_DATABASE: lms
+    DB_USERNAME: lms
+    DB_PASSWORD: secret
+    QUEUE_CONNECTION: database
+  depends_on:
+    mysql:
+      condition: service_healthy
+  restart: unless-stopped
+
+services:
+  app:
+    <<: *app
+    environment:
+      <<: *app-env
+      RUN_MIGRATIONS: "true"
+    ports:
+      - "8000:8000"
+
+  queue:
+    <<: *app
+    command: ["php", "artisan", "queue:work", "--sleep=1", "--tries=6"]
+
+  scheduler:
+    <<: *app
+    command: ["php", "artisan", "schedule:work"]
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: lms
+      MYSQL_USER: lms
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+    # Not published on the host, so it never clashes with a local MySQL (e.g. Laragon).
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-psecret"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  mysql-data:

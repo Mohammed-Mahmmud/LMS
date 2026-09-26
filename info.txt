@@ -1,0 +1,11 @@
+Instructor Revenue Ledger - admin login
+=======================================
+
+URL:       http://lms.test/admin      (click "Reload" in Laragon first)
+           or http://127.0.0.1:8000/admin after `php artisan serve`
+
+Email:     admin@lms.test
+Password:  Career180@Ledger
+
+Created by: php artisan db:seed  (DatabaseSeeder; override with ADMIN_EMAIL / ADMIN_PASSWORD in .env)
+This file is git-ignored - do not commit it.
