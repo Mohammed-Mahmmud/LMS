@@ -54,6 +54,8 @@ with a local MySQL. `docker compose down -v` removes everything, including the d
 
 ### Login
 
+> **The login credentials and URLs are in [`info.txt`](info.txt)** in the project root.
+
 `admin@lms.test` / `Career180@Ledger` (override with `ADMIN_EMAIL` / `ADMIN_PASSWORD` before seeding).
 
 ## How to run tests
